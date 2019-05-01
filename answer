@@ -1,0 +1,20 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()        
+        try:                      
+            while nums[0] == nums[1]:
+                nums.remove(nums[0])
+                nums.remove(nums[0])
+                nums.remove(nums[0])
+            return nums[0]        
+        except:    
+            return nums[0]  
+            
+            
+            
+#Runtime: 68 ms, faster than 33.33% of Python online submissions for Single Number II.
+#Memory Usage: 13.1 MB, less than 5.04% of Python online submissions for Single Number II.           
